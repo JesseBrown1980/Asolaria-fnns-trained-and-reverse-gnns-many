@@ -26,11 +26,17 @@ G4 GLSM states: `DESCRIBED → EDGE_MINED → PATH_FOUND → {MISTAKE_FLAGGED | 
 | L4 GSLGNN (v1) | `gslgnn_w9_3_seq47.pt` | seq=47 checkpoint (v1) |
 | **L1 prototype** (FNN) | `prototype_model.pt` (+run2/run3) | acc **0.9992**, recall 1.0, f1 0.9996 |
 | **L2 contrastive** (FNN) | `contrastive_model.pt` (+run2/run3) | acc **0.9992**, recall 1.0, f1 0.9996 |
-| baseline (FNN) | `baseline_model.pt`, `baseline_model_retrained.pt` | baseline / retrained head |
+| baseline (FNN) | `baseline_model.pt` | baseline head |
 
+- **⚠ Class-imbalance caveat (read before trusting the numbers):** the training corpus is **~99.99%
+  positive** (315,209 suspicious / 315,249 total — only 40 benign nodes). On a corpus that skewed, a
+  near-trivial all-positive predictor scores ~0.999, so the headline **acc/recall/f1 are
+  imbalance-inflated** — treat them as an **upper bound on a skewed split, NOT a calibrated scorer
+  baseline**. A real comparison needs a balanced corpus + per-class metrics (precision on the 40-benign
+  minority, AUC/MCC). **Do not quote 0.9992 / 1.0 / 0.9996 as a Hermes baseline.**
 - **Honest tag:** the GSLGNN manifest carries `d11: OBSERVED-acer-w9_3-trained-pending-bilateral-verify`
   — the metrics are **MEASURED on the held-out split**, but D11 honesty says *not PROVEN* until the
-  empirical 3-substrate seq=47 run + bilateral verify. Kept verbatim; not inflated.
+  empirical 3-substrate seq=47 run + bilateral verify (and the imbalance above). Kept verbatim.
 - The three FNN heads — **baseline** (feed-forward baseline), **prototype** (prototype network),
   **contrastive** (contrastive-trained) — are the trained NN variants behind the deep-graph scorers.
 
