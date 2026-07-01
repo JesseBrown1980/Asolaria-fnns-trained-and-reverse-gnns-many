@@ -50,6 +50,36 @@ tables below to see where you are; follow the links to walk the rest.
 | `-6-cyl-generator` | satellite generator |
 | `asolaria-whiteroom-engine` · `35-TB-google-AI-Ultra-migration` | (= LEG-1 + LEG-4, listed under External legs) |
 
+## Prism/Comb 0-loss (2026-07-01) — satellite entry
+One law: every prism/comb operation in Asolaria's transport layers is a **bijection**; entropy is
+invariant under bijection (`H(f(X)) = H(X)`), so re-relating information costs **0 loss** — and nothing
+claims compression below Shannon's bound. One fabric, two directions: **forward = comb**
+(collision-avoidance, execution isolation), **backward = prism** (collision-causation, many→1).
+
+**Where THIS repo sits on that law — the ensemble scores the prism direction:**
+- **reverse_gain many→1 IS the prism recombination direction.** G3 reverse-gain (and the many
+  reverse-GNN variants) runs the backward pass as a scorer: forward signals separate like comb teeth,
+  reverse-gain inverts deception (`mask` → negative, `leak` → positive) and folds the many signals back
+  toward one verdict. The 7-GNN / 8-signal HOOKWALL SCORE is the many→1 recombination seen from the
+  result side.
+- **Boundary held (anti-drift): scores are PROPOSALS, not proof.** The 0-loss theorem covers the exact
+  layers *underneath* the ensemble (256↔1024 transcode — **MEASURED**, Q-PRISM `53023b6`; CRT prime
+  lanes; content-addressed handles = addressing capacity, never compression). A trained scorer is NOT
+  a bijection — inference discards information by design — so no ensemble score may be upgraded into a
+  system-truth verdict. Verdicts belong to the owning gates (G4 GLSM `MISTAKE_FLAGGED` → Fischer
+  Tier-0 hard BLOCK, white rooms, operator gate): the **integrity dual** of the bijection chain —
+  verification = recomputation, which is why a fabricated score cannot reach consent.
+- **Caveat stands (do not soften):** the README's class-imbalance caveat is load-bearing — the corpus
+  is ~99.99% positive (315,209 / 315,249; only 40 benign), so acc 0.9992 / recall 1.0 / f1 0.9996 are
+  **imbalance-inflated**: an upper bound on a skewed split, NOT a calibrated baseline. A
+  proposal-not-proof scorer with a disclosed caveat is exactly the honest form this law requires.
+
+Scope tags: 256↔1024 rung **MEASURED** (Q-PRISM `53023b6`); the 43+ level ladder as a groupoid
+(`T_ji ∘ T_ij = id`, path-independent) = **CANON** frame; every other rung **UNVERIFIED** until its own
+round-trip proof. E=0 — docs-only propagation, nothing fired. Cross-links: Q-PRISM proofs
+(`53023b6` / `79e8d63` / `de00aca`) · `Asolaria-waves-and-cascades-…` (the avoid/cause duality) ·
+`what-is-asolaria-…` (reductions boundary) · `N-Nest-Prime-…` (integrity dual).
+
 ## Current state & evolution (2026-06-28) — read this, don't flatten it
 Asolaria is a **2.5-month archaeology**, not a flat stack. **Capability lineage:** auto-approval switch →
 dashboard → multi-agent → local+web MCP + code-wiki → index language (pixels-first) → cubes-as-catalogs
